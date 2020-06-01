@@ -43,6 +43,9 @@ public class BowlingGame {
             else if(currentScore == 10 && times != 10){
                 score = 10 + (int)bowlingScore.get(times).get(0);
             }
+            else if(currentScore < 10){
+                score = currentScore;
+            }
         }
         else {
             score = currentScore;

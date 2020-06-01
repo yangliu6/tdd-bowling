@@ -82,4 +82,16 @@ public class BowlingGameTest {
 
         assertEquals(15, score);
     }
+
+    @Test
+    public void should_be_two_ball_strike_bottles_num_when_calculate_game_score_given_the_second_ball_have_not_strike_all_bottles() {
+        BowlingGame bowlingGame = new BowlingGame();
+        Bowling bowling1 = new Bowling();
+        bowling1.setScore(4);
+        bowlingGame.throwBowling(bowling1, bowling1);
+
+        int score = bowlingGame.calculateSingleGameScore(1);
+
+        assertEquals(8, score);
+    }
 }
