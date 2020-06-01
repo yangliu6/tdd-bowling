@@ -94,4 +94,18 @@ public class BowlingGameTest {
 
         assertEquals(8, score);
     }
+
+    @Test
+    public void should_be_280_plus_last_two_balls_strike_bottles_when_calculate_final_score_given_all_games_are_STRIKE() {
+        BowlingGame bowlingGame = new BowlingGame();
+        Bowling bowling1 = new Bowling();
+        bowling1.setScore(10);
+        for (int i = 0; i < 9; i++) {
+            bowlingGame.throwBowling(bowling1, null);
+        }
+        bowlingGame.throwBowling(bowling1,bowling1,bowling1);
+        int score = bowlingGame.calculateFinalGameScore();
+
+        assertEquals(300, score);
+    }
 }
