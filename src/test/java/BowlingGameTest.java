@@ -122,4 +122,17 @@ public class BowlingGameTest {
 
         assertEquals(150, score);
     }
+
+    @Test
+    public void should_strike_bottles_nums_of_all_games_when_calculate_final_score_given_all_games_have_not_strike_all_bottles() {
+        BowlingGame bowlingGame = new BowlingGame();
+        Bowling bowling1 = new Bowling();
+        bowling1.setScore(4);
+        for (int i = 0; i < 10; i++) {
+            bowlingGame.throwBowling(bowling1, bowling1);
+        }
+        int score = bowlingGame.calculateFinalGameScore();
+
+        assertEquals(80, score);
+    }
 }
