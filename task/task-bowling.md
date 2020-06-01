@@ -1,12 +1,12 @@
 ### Tasking of bowling
 
-   - [ ] Given 第一局游戏STRIKE且第二局游戏不为STRIKE When 计算第一局游戏分数， Then 分数为10加上后两个球击倒的瓶数和
+   - [X] Given 第一局游戏STRIKE且第二局游戏不为STRIKE When 计算第一局游戏分数， Then 分数为10加上后两个球击倒的瓶数和
    
-   - [ ] Given 第一局和第二局游戏均为STRIKE When 计算第一局游戏分数， Then 分数为20加第三轮游戏第一个球击倒的瓶数和
+   - [X] Given 第一局和第二局游戏均为STRIKE When 计算第一局游戏分数， Then 分数为20加第三轮游戏第一个球击倒的瓶数和
    
-   - [ ] Given 第一局游戏SPARE， When 计算第一局游戏分数， Then分数为10加上后一球击倒的瓶数和
+   - [X] Given 第一局游戏SPARE， When 计算第一局游戏分数， Then分数为10加上后一球击倒的瓶数和
    
-   - [ ] Given 第十局游戏STRIKE， When计算第十局游戏分数 ， Then 分数为10加上后两个球击倒的瓶数和
+   - [X] Given 第十局游戏STRIKE， When计算第十局游戏分数 ， Then 分数为10加上后两个球击倒的瓶数和
    
    - [ ] Given 第十局游戏SPARE， When计算第十局游戏分数 ， Then 分数为10加上后一个球击倒的瓶数和
    
