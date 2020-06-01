@@ -24,6 +24,9 @@ public class BowlingGame {
         if(currentScore == 10 && (int)bowlingScore.get(times+1).get(0) != 10){ 
             score = 10 +  (int)bowlingScore.get(times+1).get(0)+ (int) bowlingScore.get(times+1).get(1);
         }
+        else if(currentScore == 10 && (int)bowlingScore.get(times+1).get(0) == 10){
+            score = 20 + (int)bowlingScore.get(times+2).get(0);
+        }
         return score;
     }
 
