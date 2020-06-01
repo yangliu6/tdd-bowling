@@ -108,4 +108,18 @@ public class BowlingGameTest {
 
         assertEquals(300, score);
     }
+
+    @Test
+    public void should_be_100_plus_first_ball_of_second_to_tenth_game_strike_bottles_plus_last_ball_strike_bottles_when_calculate_final_score_given_all_games_are_SPARE() {
+        BowlingGame bowlingGame = new BowlingGame();
+        Bowling bowling1 = new Bowling();
+        bowling1.setScore(5);
+        for (int i = 0; i < 9; i++) {
+            bowlingGame.throwBowling(bowling1, bowling1);
+        }
+        bowlingGame.throwBowling(bowling1,bowling1,bowling1);
+        int score = bowlingGame.calculateFinalGameScore();
+
+        assertEquals(150, score);
+    }
 }
