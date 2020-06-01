@@ -65,4 +65,21 @@ public class BowlingGameTest {
 
         assertEquals(30, score);
     }
+
+    @Test
+    public void should_be_10_plus_following_one_ball_strike_bottles_when_calculate_tenth_game_score_given_tenth_game_SPARE() {
+        BowlingGame bowlingGame = new BowlingGame();
+        Bowling bowling1 = new Bowling();
+        bowling1.setScore(4);
+        for (int i = 0; i < 9; i++) {
+            bowlingGame.throwBowling(bowling1, bowling1);
+        }
+        Bowling bowling2 = new Bowling();
+        bowling2.setScore(5);
+        bowlingGame.throwBowling(bowling2,bowling2,bowling2);
+
+        int score = bowlingGame.calculateSingleGameScore(10);
+
+        assertEquals(15, score);
+    }
 }
